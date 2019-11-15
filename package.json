@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5"
+  },
+  "dependencies": {
+    "@actions/io": "^1.0.1",
+    "@actions/exec": "^1.0.1",
+    "@actions/github": "^1.1.0",
+    "@actions/core": "^1.2.0"
+  },
+  "scripts": {
+    "precommit": "yarn build && git add dist/index.js",
+    "build": "ncc build src/index.js"
+  },
+  "license": "MIT",
+  "author": "Perceptual Inc.",
+  "keywords": [
+    "GitHub action",
+    "Percy",
+    "Storybook",
+    "visual testing"
+  ],
+  "repository": "https://github.com/percy/storybook-action",
+  "main": "dist/index.js",
+  "description": "",
+  "version": "0.1.0",
+  "name": "storybook"
+}

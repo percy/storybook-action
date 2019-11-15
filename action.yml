@@ -1,0 +1,12 @@
+name: "percy-storybook"
+description: "A GitHub Action for running Storybook visual tests with Percy"
+branding:
+  icon: 'camera'
+  color: 'purple'
+inputs:
+  custom-command:
+    description: 'Run your own storybook command'
+    default: ''
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

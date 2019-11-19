@@ -6,9 +6,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      # - name: Install dependencies
-      #   run: yarn
-      # - name: Default test
-      #   uses: ./
+      - name: Go to storybook test directory
+        run: cd $GITHUB_WORKSPACE/test-storybook && echo $(pwd)
+      - name: Install dependencies
+        run: yarn
+      - name: Default test
+        uses: ./
+      - name: Custom command test
+        uses: ./
+        with:
+          custom-command: "storybook:build && yarn storybook:percy-debug"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

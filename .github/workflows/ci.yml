@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Install dependencies
-        run: yarn
-      - name: Default test
-        uses: ./
+      # - name: Install dependencies
+      #   run: yarn
+      # - name: Default test
+      #   uses: ./
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

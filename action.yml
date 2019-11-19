@@ -13,6 +13,9 @@ inputs:
   custom-command:
     description: 'Run your own storybook command'
     default: ''
+  cwd:
+    description: 'The directory for the commands to execute in'
+    default: './'
 runs:
   using: 'node12'
   main: 'dist/index.js'

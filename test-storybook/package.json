@@ -3,41 +3,23 @@
   "name": "storybook-for-react-integration-tests",
   "version": "3.1.0",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c storybook -s ./storybook/public",
-    "storybook:build": "build-storybook -c storybook -s ./storybook/public",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
     "storybook:percy-debug": "percy-storybook --debug",
-    "storybook:percy": "build-storybook -c storybook -s ./storybook/public && percy-storybook --rtl_regex=Direction",
+    "storybook:percy": "percy-storybook --rtl_regex=Direction",
     "storybook:percy-no-build": "percy-storybook --rtl_regex=Direction"
   },
   "dependencies": {
-    "babel-eslint": "^10.0.0",
-    "babel-jest": "^24.8.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jasmine": "*",
-    "eslint-plugin-jest": "^22.4.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.1.0",
-    "faker": "^4.1.0",
-    "husky": "^3.0.9",
-    "lint-staged": "^9.4.2",
-    "mock-fs": "^4.8.0",
-    "mockdate": "^2.0.1",
-    "prettier": "^1.17.0",
-    "prop-types": "^15.5.10",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-match-media": "^2.2.0"
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "@percy-io/in-percy": "^0.1.11",
+    "@babel/core": "^7.7.2",
     "@percy/storybook": "^3.2.0",
-    "@storybook/addon-actions": "v5.1.0-alpha.26",
-    "@storybook/addon-info": "v5.1.0-alpha.26",
-    "@storybook/addon-knobs": "v5.2.6",
-    "@storybook/addon-links": "v5.1.0-alpha.26",
-    "@storybook/addon-options": "v5.1.0-alpha.26",
-    "@storybook/addons": "v5.1.0-alpha.26",
-    "@storybook/react": "v5.1.0-alpha.26"
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "babel-loader": "^8.0.6"
   }
 }

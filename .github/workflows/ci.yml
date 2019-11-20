@@ -7,8 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install dependencies
+        working-directory: ./test-storybook
         run: yarn
       - name: Default test
         uses: ./
+        with:
+          working-directory: "./test-storybook"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

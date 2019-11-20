@@ -4,9 +4,18 @@ branding:
   icon: 'camera'
   color: 'purple'
 inputs:
+  percy-flags:
+    description: 'Flags to pass to the `percy-storybook` CLI command'
+    default: ''
+  storybook-flags:
+    description: 'Flags to pass to the `build-storybook` CLI command'
+    default: ''
   custom-command:
     description: 'Run your own storybook command'
     default: ''
+  working-directory:
+    description: 'The directory for the commands to execute in'
+    default: './'
 runs:
   using: 'node12'
   main: 'dist/index.js'

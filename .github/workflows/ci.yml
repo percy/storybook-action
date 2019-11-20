@@ -12,6 +12,6 @@ jobs:
       - name: Default test
         uses: ./
         with:
-          cwd: "./test-storybook"
+          working-directory: "./test-storybook"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

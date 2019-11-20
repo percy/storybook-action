@@ -13,7 +13,7 @@ inputs:
   custom-command:
     description: 'Run your own storybook command'
     default: ''
-  cwd:
+  working-directory:
     description: 'The directory for the commands to execute in'
     default: './'
 runs:

@@ -23,7 +23,7 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
     let percyFlags = core.getInput('percy-flags');
     let customCommand = core.getInput('custom-command');
     let storybookFlags = core.getInput('storybook-flags');
-    let cwd = core.getInput('cwd');
+    let workingDir = core.getInput('working-directory');
     let pullRequestNumber = github.context.payload.number;
 
     // Set the CI builds user agent
@@ -41,7 +41,7 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
       // happy path
       let npxPath = await io.which('npx', true);
       let execOptions = {
-        cwd: cwd
+        cwd: workingDir
       };
 
       // Build the storybook project

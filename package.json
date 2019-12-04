@@ -22,7 +22,7 @@
   ],
   "repository": "https://github.com/percy/storybook-action",
   "main": "dist/index.js",
-  "description": "",
-  "version": "0.1.0",
+  "description": "A GitHub Action for running Storybook visual tests with Percy",
+  "version": "0.1.1",
   "name": "storybook"
 }

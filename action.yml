@@ -1,4 +1,4 @@
-name: "percy-storybook"
+name: "Percy Storybook"
 description: "A GitHub Action for running Storybook visual tests with Percy"
 branding:
   icon: 'camera'

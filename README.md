@@ -1,6 +1,6 @@
 # Percy Storybook GitHub Action
 
-A GitHub action to run Percy Storybook.
+A GitHub action to run Percy Storybook for visual testing.
 
 ## Quick start
 
@@ -23,7 +23,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Percy Test
-        uses: percy/storybook-action@master
+        uses: percy/storybook-action@v0.1.1
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 ```
@@ -43,7 +43,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Percy Test
-        uses: percy/storybook-action@master
+        uses: percy/storybook-action@v0.1.1
         with:
           custom-command: 'yarn storybook:percy'
         env:

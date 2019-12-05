@@ -1,5 +1,5 @@
-name: "Percy Storybook"
-description: "A GitHub Action for running Storybook visual tests with Percy"
+name: 'Percy for Storybook'
+description: 'A GitHub action to visually test Storybook with Percy.'
 branding:
   icon: 'camera'
   color: 'purple'

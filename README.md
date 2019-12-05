@@ -1,6 +1,6 @@
-# Percy Storybook GitHub Action
+# Percy for Storybook
 
-A GitHub action to run Percy Storybook for visual testing.
+A GitHub action to visually test Storybook with Percy.
 
 ## Quick start
 

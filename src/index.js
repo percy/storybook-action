@@ -29,8 +29,6 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
       cwd: workingDir,
       windowsVerbatimArguments: true
     };
-    console.log('cwd =', process.cwd());
-    console.log('execOptions = ', execOptions);
 
     // Set the CI builds user agent
     core.exportVariable('PERCY_GITHUB_ACTION', ACTION_UA);

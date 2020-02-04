@@ -26,7 +26,8 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
     let workingDir = core.getInput('working-directory');
     let pullRequestNumber = github.context.payload.number;
     let execOptions = {
-      cwd: workingDir
+      cwd: workingDir,
+      windowsVerbatimArguments: true
     };
 
     // Set the CI builds user agent

@@ -8155,7 +8155,8 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
     let workingDir = core.getInput('working-directory');
     let pullRequestNumber = github.context.payload.number;
     let execOptions = {
-      cwd: workingDir
+      cwd: workingDir,
+      windowsVerbatimArguments: true
     };
 
     // Set the CI builds user agent
@@ -8886,7 +8887,7 @@ module.exports = {"activity":{"checkStarringRepo":{"method":"GET","params":{"own
 /***/ 731:
 /***/ (function(module) {
 
-module.exports = {"devDependencies":{"@zeit/ncc":"^0.20.5"},"dependencies":{"@actions/io":"^1.0.1","@actions/exec":"^1.0.1","@actions/github":"^1.1.0","@actions/core":"^1.2.0"},"scripts":{"precommit":"yarn build && git add dist/index.js","build":"ncc build src/index.js"},"license":"MIT","author":"Perceptual Inc.","keywords":["GitHub action","Percy","Storybook","visual testing"],"repository":"https://github.com/percy/storybook-action","main":"dist/index.js","description":"A GitHub Action for running Storybook visual tests with Percy","version":"0.1.1","name":"storybook"};
+module.exports = {"devDependencies":{"@zeit/ncc":"^0.20.5"},"dependencies":{"@actions/io":"^1.0.1","@actions/exec":"^1.0.1","@actions/github":"^1.1.0","@actions/core":"^1.2.0"},"scripts":{"precommit":"yarn build && git add dist/index.js","build":"ncc build src/index.js"},"license":"MIT","author":"Perceptual Inc.","keywords":["GitHub action","Percy","Storybook","visual testing"],"repository":"https://github.com/percy/storybook-action","main":"dist/index.js","description":"A GitHub Action for running Storybook visual tests with Percy","version":"0.1.3","name":"storybook"};
 
 /***/ }),
 

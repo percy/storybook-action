@@ -48,7 +48,7 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
       // Build the storybook project
       await exec.exec(`"${npxPath}" build-storybook ${storybookFlags}`, [], execOptions);
       // Run Percy over the build output
-      await exec.exec(`"${npxPath}" percy-storybook ${percyFlags}`, [], execOptions);
+      await exec.exec(`"${npxPath}" @percy/storybook ${percyFlags}`, [], execOptions);
 
       return;
     }

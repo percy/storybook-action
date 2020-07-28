@@ -24,7 +24,7 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
     let customCommand = core.getInput('custom-command');
     let storybookFlags = core.getInput('storybook-flags');
     let workingDir = core.getInput('working-directory');
-    let pullRequestNumber = github.context.payload.number;
+    let pullRequestNumber = github.context.payload.number || github.event.pull_request.number;
     let execOptions = {
       cwd: workingDir,
       windowsVerbatimArguments: true

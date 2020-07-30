@@ -14,7 +14,11 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
     core.exportVariable('PERCY_BRANCH', prBranch);
     core.exportVariable('PERCY_PULL_REQUEST', pullRequestNumber);
   } else {
-    core.exportVariable('PERCY_BRANCH', github.context.payload.ref.replace('refs/heads/', ''));
+    try {
+      core.exportVariable('PERCY_BRANCH', github.context.payload.ref.replace('refs/heads/', ''));
+    } catch (err) {
+      console.log(`[percy] Couldn't set branch: ${err}`);
+    }
   }
 }
 
@@ -24,10 +28,10 @@ function setPercyBranchBuildInfo(pullRequestNumber) {
     let customCommand = core.getInput('custom-command');
     let storybookFlags = core.getInput('storybook-flags');
     let workingDir = core.getInput('working-directory');
-    let pullRequestNumber = github.context.payload.number || github.event.pull_request.number;
+    let pullRequestNumber = github.context.payload.number;
     let execOptions = {
       cwd: workingDir,
-      windowsVerbatimArguments: true
+      windowsVerbatimArguments: true,
     };
 
     // Set the CI builds user agent

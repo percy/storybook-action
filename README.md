@@ -29,7 +29,7 @@ jobs:
 ```
 
 And this is a setup that passes a custom command, which allows for any
-configuraion:
+configuration:
 
 ``` yaml
 name: CI

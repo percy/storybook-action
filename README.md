@@ -1,5 +1,9 @@
 # Percy for Storybook
 
+## Deprecated
+
+⚠️ This action is only required if you're using an older SDK not using Percy CLI. For the Storybook SDK, anything v4.0+ will not need this action. 3.x and below _will_ need this action. 
+
 A GitHub action to visually test Storybook with Percy.
 
 ## Quick start
